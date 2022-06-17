@@ -10,20 +10,21 @@ export const useAnimated = () => {
     const opacity  = useRef(new Animated.Value(0)).current;
     const position = useRef(new Animated.Value(-100)).current;
 
-    const fadeIn = () =>{
+    const fadeIn = (duration:number = 300) =>{
         Animated.timing(
         opacity,
         {
             toValue: 1,
-            duration: 300,
+            duration,
             useNativeDriver: true,
         }
         ).start();
+
         Animated.timing(
         position,
         {
             toValue: 0,
-            duration: 1000,
+            duration,
             useNativeDriver: true,
             easing: Easing.bounce,
         }
@@ -41,7 +42,7 @@ export const useAnimated = () => {
         ).start();
     };
 
-    const startMovingPosition = ( initPosiion: number, duration: number = 1000) => {
+    const startMovingPosition = ( initPosiion: number, duration: number = 300) => {
 
         position.setValue(initPosiion);
 

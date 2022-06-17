@@ -48,4 +48,19 @@ export const menuItems: MenuItem[] = [
         icon: 'copy-outline',
         component: 'ModalScreens',
     },
+    {
+        name: 'Infinity Screen',
+        icon: 'infinite-outline',
+        component: 'InfinityScrollSceens',
+    },
+    {
+        name: 'Slides Screen',
+        icon: 'flower-outline',
+        component: 'SlidesScreens',
+    },
+    {
+        name: 'Theme Global',
+        icon: 'contrast-outline',
+        component: 'ChangeThemeScreen',
+    },
 ];
